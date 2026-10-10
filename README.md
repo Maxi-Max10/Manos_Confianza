@@ -27,7 +27,7 @@ Abrí `http://localhost:3000`. Para activar el flujo real de autenticación y Su
 
 ## Desarrollo local
 
-Requisitos: Node.js 20 o superior y un proyecto de Supabase.
+Requisitos: Node.js 20 o superior. Supabase solo es necesario para el flujo real.
 
 ```powershell
 npm install
@@ -37,12 +37,13 @@ npm run dev
 
 La aplicación queda disponible en `http://localhost:3000`.
 
-Configurá `.env.local`:
+Para activar el flujo real, configurá `.env.local`:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://TU-PROYECTO.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=TU_CLAVE_ANON_PUBLICA
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_DEMO_MODE=false
 ```
 
 La clave `anon` es pública y está protegida por RLS. Nunca agregues `service_role` al frontend ni a una variable `NEXT_PUBLIC_*`.
